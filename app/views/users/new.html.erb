@@ -1,15 +1,15 @@
- <%# <form action="/users" method="post" accept-charset="UTF-8">
-   <label for="username">Username:</label>
-   <input type="text" id="username" name="user[username]"><br><br>
-   <label for="email">Email:</label>
-   <input type="email" id="email" name="user[email]"><br><br>
-   <label for="password">Password:</label>
-   <input type="password" id="password" name="user[password]"><br><br>
-   <input type="submit" value="Submit">
-   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
- <%# </form>  %> 
+# <form action="/users/new" method="get" accept-charset="UTF-8">
+#    <label for="username">Username:</label>
+#    <input type="text" id="username" name="user[username]"><br><br>
+#    <label for="email">Email:</label>
+#    <input type="email" id="email" name="user[email]"><br><br>
+#    <label for="password">Password:</label>
+#    <input type="password" id="password" name="user[password]"><br><br>
+#    <input type="submit" value="Submit">
+#    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
+# </form>  
 
-<% form_for :user url ="/users" method = "post" do |form| %>
+<%= form_for @user do |form| %>
   <div>
   Username: <%= form.text_field :username, placeholder: 'your username' %><br />
   </div>
@@ -21,12 +21,13 @@
   </div>
   Submit: <%= form.submit "Submit" %><br />
 <% end %>  
-  <%# <%= form_with url"/users" method="post"  do |form| %> 
-   <%# <%= form.label :username, "Username" %> 
-   <%# <%= form.text_area :username, size: "60x10" %> 
-   <%# <%= form.label :email, "Email" %> 
-   <%# <%= form.email_field :email %> 
-   <%# <%= form.label :password, "Password" %> 
-   <%# <%= form.password_field :password %> 
-   <%# <%= form.submit "Submit" %> 
-  <%# <% end %> 
+
+  # <% form_tag users_path, method: :get  do %> 
+  #  <%= label_tag :username, "Username" %> 
+  #   <%= text_area_tag :username, size: "60x10" %> 
+  #   <%= label_tag :email, "Email" %> 
+  #   <%= email_field_tag :email %> 
+  #   <%= label_tag :password, "Password" %> 
+  #   <%= password_field_tag :password %> 
+  #   <%= submit_tag "Submit" %> 
+  # <% end %> 
