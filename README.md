@@ -1,6 +1,6 @@
 ## Re-former Readme
 
-This project covers the use of Rails to create and delete users and store them in a database.
+This project covers the use of Rails to create and edit users and store them in a database.
 
 - It uses a basic html form, -form_tag form, and -form_for form
 - It has some basic validations and error messages if you input incorrect data.
@@ -14,8 +14,9 @@ This project covers the use of Rails to create and delete users and store them i
 ### Getting started
 
 * Make sure you have installed Rails on your local machine
-* Fork or clone the repository
+* Fork or clone the repository 'https://github.com/Byabasaija/re-former/tree/re-former-feature'
 * Do bundle install
+* Run rails db:migrate 
 * Open the rails Server in your terminal
 * Go to localhost:3000/users/new in your browser
 * Create new user and edit them, you can also try to edit a user with an empty field and see what happens
@@ -34,7 +35,7 @@ This project covers the use of Rails to create and delete users and store them i
 
 ### Acknowledment
 
-- reddit: [reddit](https://www.reddit.com/)
+The Odin Project [Theodinproject](https://www.theodinproject.com/courses/ruby-on-rails/lessons/form-basics)
 
 ### Contributions 
 
