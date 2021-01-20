@@ -1,16 +1,15 @@
-# <form action="/users" method="post" accept-charset="UTF-8">
-# <%# <input type = "text" id= "user_params" name= "user_params"> %>
-#   <label for="username">:</label>
-#   <input type="text" id="username" name="user[username]"><br><br>
-#   <label for="email">Email:</label>
-#   <input type="email" id="email" name="user[email]"><br><br>
-#   <label for="password">Password:</label>
-#   <input type="password" id="password" name="user[password]"><br><br>
-#   <input type="submit" value="Submit">
-#   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-# </form> 
+ <%# <form action="/users" method="post" accept-charset="UTF-8">
+   <label for="username">Username:</label>
+   <input type="text" id="username" name="user[username]"><br><br>
+   <label for="email">Email:</label>
+   <input type="email" id="email" name="user[email]"><br><br>
+   <label for="password">Password:</label>
+   <input type="password" id="password" name="user[password]"><br><br>
+   <input type="submit" value="Submit">
+   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
+ <%# </form>  %> 
 
-<%= form_for :user do |form| %>
+<% form_for :user url ="/users" method = "post" do |form| %>
   <div>
   Username: <%= form.text_field :username, placeholder: 'your username' %><br />
   </div>
@@ -19,13 +18,15 @@
   </div>
   <div>
   Password: <%= form.password_field :password, placeholder: 'xxxxxxxxx' %><br />
-  <div>
+  </div>
   Submit: <%= form.submit "Submit" %><br />
-  # <%= form.label :username, "Username" %>
-  # <%= form.text_area :username, size: "60x10" %>
-  # <%= form.label :email, "Email" %>
-  # <%= form.email_field :email %>
-  # <%= form.label :password, "Password" %>
-  # <%= form.password_field :password %>
-  # <%= form.submit "Submit" %>
-<% end %>
+<% end %>  
+  <%# <%= form_with url"/users" method="post"  do |form| %> 
+   <%# <%= form.label :username, "Username" %> 
+   <%# <%= form.text_area :username, size: "60x10" %> 
+   <%# <%= form.label :email, "Email" %> 
+   <%# <%= form.email_field :email %> 
+   <%# <%= form.label :password, "Password" %> 
+   <%# <%= form.password_field :password %> 
+   <%# <%= form.submit "Submit" %> 
+  <%# <% end %> 

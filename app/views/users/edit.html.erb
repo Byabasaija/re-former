@@ -1,0 +1,15 @@
+
+
+<%= form_for :user url ="/users/:id/edit" method = "post" do |form| %>
+  <div>
+  Username: <%= form.text_field :username, placeholder: 'your username' %><br />
+  </div>
+  <div>
+  Email: <%= form.email_field :email, placeholder: 'email@mail.com' %><br />
+  </div>
+  <div>
+  Password: <%= form.password_field :password, placeholder: 'xxxxxxxxx' %><br />
+  <div>
+  Edit: <%= form.submit "Edit" %><br />
+<%= end %>
+ 
