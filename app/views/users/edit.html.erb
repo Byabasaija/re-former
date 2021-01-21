@@ -1,0 +1,45 @@
+<!--
+# <form action="/users/:id" method="get" accept-charset="UTF-8">
+#    <label for="username">Username:</label>
+#    <input type="text" id="username" name="user[username]"><br><br>
+#    <label for="email">Email:</label>
+#    <input type="email" id="email" name="user[email]"><br><br>
+#    <label for="password">Password:</label>
+#    <input type="password" id="password" name="user[password]"><br><br>
+#    <input type="submit" value="Submit">
+#    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
+# </form>
+-->  
+
+<!--
+# <% form_tag user_path, method: :patch  do %> 
+#  <%= label_tag :username, "Username" %> 
+#   <%= text_area_tag :username, size: "60x10" %> 
+#   <%= label_tag :email, "Email" %> 
+#   <%= email_field_tag :email %> 
+#   <%= label_tag :password, "Password" %> 
+#   <%= password_field_tag :password %> 
+#   <%= submit_tag "Submit" %> 
+# <% end %> 
+-->
+
+
+<%= form_for(@user, url: user_path) do |form| %>
+  
+  Username: <%= form.text_field :username, placeholder: 'your username' %><br />
+  
+  
+  Email: <%= form.email_field :email, placeholder: 'email@mail.com' %><br />
+  
+  
+  Password: <%= form.password_field :password, placeholder: 'xxxxxxxxx' %><br />
+  
+  Edit: <%= form.submit "Edit" %><br />
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

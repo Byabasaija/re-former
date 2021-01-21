@@ -1,24 +1,46 @@
-# README
+## Re-former Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project covers the use of Rails to create and edit users and store them in a database.
 
-Things you may want to cover:
+- It uses a basic html form, -form_tag form, and -form_for form
+- It has some basic validations and error messages if you input incorrect data.
 
-* Ruby version
+### Built with
 
-* System dependencies
+* Ruby on Rails
+* Rubocop
+* VsCode
 
-* Configuration
+### Getting started
 
-* Database creation
+* Make sure you have installed Rails on your local machine
+* Fork or clone the repository 'https://github.com/Byabasaija/re-former/tree/re-former-feature'
+* Do bundle install
+* Run rails db:migrate 
+* Open the rails Server in your terminal
+* Go to localhost:3000/users/new in your browser
+* Create new user and edit them, you can also try to edit a user with an empty field and see what happens
 
-* Database initialization
+### Authors:
 
-* How to run the test suite
+ **Pascal Byabasaija**
+- Linkedin: [Pascal Byabasaija](https://www.linkedin.com/in/pascal-byabasaija/)
+- Github: [@Byabasaija](https://github.com/Byabasaija)
+- Twitter: [@byabashaijapoet](https://twitter.com/byabashaijapoet)
 
-* Services (job queues, cache servers, search engines, etc.)
+**Henok Mekonnen Mossissa**
+- Linkedin: [Henok Makonen](https://www.linkedin.com/in/henok-mekonnen-2a251613/)
+- Github: [@henatan99](https://github.com/henatan99)
+- Twitter: [@henatan99](https://twitter.com/henatan99)
 
-* Deployment instructions
+### Acknowledment
 
-* ...
+The Odin Project [Theodinproject](https://www.theodinproject.com/courses/ruby-on-rails/lessons/form-basics)
+
+### Contributions 
+
+Contributions, issues and requests are welcome
+
+### Show support
+
+Give a star if you like the project
